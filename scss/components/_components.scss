@@ -1,0 +1,221 @@
+@import "./navbar";
+
+@import "./slick";
+
+@import "./tabbar";
+
+
+.pill-btn-top-text {
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 0.6rem;
+    text-align: center;
+}
+
+.pill-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: $secondary;
+    color: $white;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.3s;
+    border-radius: 50rem;
+    padding: 0.3rem;
+    padding-right: 1.5rem;
+    width: fit-content;
+
+    span {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .icon-div {
+        background-color: $white;
+        border-radius: 50%;
+        min-width: 3.6rem;
+        min-height: 3.6rem;
+        width: 3.6rem;
+        height: 3.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(36, 161, 211);
+
+        i {
+            font-size: 20px;
+            color: $secondary;
+        }
+    }
+
+    .icon-div-small {
+        background-color: $white;
+        border-radius: 50%;
+        min-width: 3rem;
+        min-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(36, 161, 211);
+
+        i {
+            font-size: 20px;
+            color: $primary;
+        }
+    }
+
+    @media (max-width: 450px) {
+        width: fit-content;
+    }
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+
+        .icon-div, .icon-div-small {
+
+            i,
+            img {
+                transform: translateX(15%)
+            }
+        }
+    }
+}
+
+
+.pill-btn-opposite {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: transparent;
+    border-radius: 50rem;
+    padding: 0.3rem;
+    padding-right: 1.5rem;
+    background-color: $primary-soft;
+    width: fit-content;
+    span {
+        font-size: 18px;
+        font-weight: 500;
+        color: $primary;
+    }
+
+    .icon-div {
+        background-color: $primary;
+        border-radius: 50%;
+        min-width: 3.7rem;
+        min-height: 3.7rem;
+        width: 3.7rem;
+        height: 3.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+
+        i {
+            font-size: 20px;
+            color: $white;
+        }
+    }
+
+
+    .icon-div-small{
+        background-color: $primary;
+        border-radius: 50%;
+        min-width: 3rem;
+        min-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+
+        i {
+            font-size: 20px;
+            color: $white;
+        }
+    }
+
+    @media (max-width: 450px) {
+        width: fit-content;
+    }
+
+    &:hover {
+        .icon-div, .icon-div-small  {
+            i {
+                transform: translateX(15%)
+            }
+        }
+    }
+
+
+}
+
+.pill-btn-transparent {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: transparent;
+    border-radius: 50rem;
+    padding: 0.3rem;
+    padding-right: 1.5rem;
+    background-color: transparent;
+    border: 2px solid $secondary;
+    width: fit-content;
+    cursor: pointer;
+    span {
+        font-size: 18px;
+        font-weight: 500;
+        color: $white;
+    }
+
+    .icon-div {
+        background-color: $secondary;
+        border-radius: 50%;
+        min-width: 3.7rem;
+        min-height: 3.7rem;
+        width: 3.7rem;
+        height: 3.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+
+        i {
+            font-size: 20px;
+            color: $white;
+        }
+    }
+
+    .icon-div-small {
+        background-color: #E6F1FF;
+        border-radius: 50%;
+        min-width: 3rem;
+        min-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(36, 161, 211);
+
+        i {
+            font-size: 20px;
+            color: $primary;
+        }
+    }
+
+
+    @media (max-width: 450px) {
+        width: fit-content;
+    }
+
+    &:hover {
+        .icon-div-small, .icon-div {
+            i {
+                transform: translateX(15%)
+            }
+        }
+    }
+
+
+}

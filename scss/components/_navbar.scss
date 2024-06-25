@@ -1,0 +1,29 @@
+nav {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  // background-color: $white;
+
+  .navbar-brand {
+    max-width: calc(100% - 5rem);
+    width: 18rem;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .nav-link {
+    color: $dark;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 1.5rem;
+
+    &:hover {
+      color: $primary;
+    }
+
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
+  }
+}
