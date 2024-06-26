@@ -12817,17 +12817,6 @@ nav .nav-link:hover {
   background: linear-gradient(180deg, #2e9cdc 10%, #2d56d2 100%);
   z-index: -2;
 }
-.services-list::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/img/texture-1.png");
-  opacity: 0.15;
-  z-index: -1;
-}
 .services-list .header {
   font-size: 2.5rem;
 }
@@ -12991,17 +12980,6 @@ nav .nav-link:hover {
   .about-us {
     padding: 3rem 0;
   }
-}
-.about-us::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/img/texture-1.png");
-  opacity: 0.15;
-  z-index: 0;
 }
 .about-us .flex {
   display: flex;

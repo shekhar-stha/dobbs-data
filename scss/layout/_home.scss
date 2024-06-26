@@ -356,17 +356,17 @@
         z-index: -2;
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('/img/texture-1.png');
-        opacity: 0.15;
-        z-index: -1;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url('/img/texture-1.png');
+    //     opacity: 0.15;
+    //     z-index: -1;
+    // }
 
     .header {
         font-size: 2.5rem;
@@ -551,17 +551,17 @@
         padding: 3rem 0;
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('/img/texture-1.png');
-        opacity: 0.15;
-        z-index: 0;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url('/img/texture-1.png');
+    //     opacity: 0.15;
+    //     z-index: 0;
+    // }
 
     .flex {
         display: flex;
