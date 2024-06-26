@@ -664,3 +664,63 @@ if (!document.querySelector(".bottom-copyright")) {
 
 let vid = document.getElementById("heroVideo");
 vid.playbackRate = 0.6;
+
+$('.testimonial-slider').slick({
+  dots: true,
+  infinite: true,
+  loop: true,
+  speed: 300,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  prevArrow: '<i class="fa-solid fa-chevron-left left-arrow"></i>',
+  nextArrow: '<i class="fa-solid fa-chevron-right right-arrow"></i>',
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  var paragraphs = document.querySelectorAll(".testimonial-slider .data");
+
+  function setEqualHeight(columns) {
+    if (window.innerWidth > 992) {
+      var tallestColumn = 0;
+      columns.forEach(function (column) {
+        column.style.height = "auto";
+        var columnHeight = column.offsetHeight;
+        if (columnHeight > tallestColumn) {
+          tallestColumn = columnHeight;
+        }
+      });
+      columns.forEach(function (column) {
+        column.style.height = tallestColumn + "px";
+      });
+    }
+  }
+
+  var columns = document.querySelectorAll(".testimonial-slider .column");
+  setEqualHeight(columns);
+
+  window.addEventListener("resize", function () {
+    setEqualHeight(columns);
+  });
+
+  toggleReviews();
+});
+

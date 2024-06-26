@@ -156,7 +156,7 @@
             z-index: -1;
             object-fit: cover;
             z-index: -2;
-            filter: blur(1px);
+            filter: blur(2px) brightness(50%);
         }
 
         &::after {
@@ -167,10 +167,13 @@
             width: 100%;
             height: 100%;
             // background: linear-gradient(0deg, rgba(71,95,135,1) 0%, rgba(71,95,135,0.9585084033613446) 35%, rgba(16,102,150,0.633578431372549) 76%);
-            background: rgba(19, 31, 59, 0.8);
+            // background: rgba(19, 31, 59, 0.8);
+            // background:  linear-gradient(180deg, rgba(28, 114, 163, 0.363) 10%, rgba(29, 57, 139, 0.788) 100%);
+            background: linear-gradient(0deg, rgba(46,156,220,1) 1%, rgba(45,86,210,0.4206932773109243) 61%);
             opacity: 0.9;
             z-index: -2;
         }
+
     }
 
 }
@@ -189,10 +192,68 @@
         }
 
         .typo {
-            width: 40%;
+            width: 48%;
 
             @media (max-width: 992px) {
                 width: 100%;
+            }
+        }
+
+        // Logos Margue
+        .marquee-section {
+            --space: 2rem;
+            display: grid;
+            align-content: center;
+            overflow: hidden;
+            gap: var(--space);
+            width: 50%;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            padding: 0rem 0;
+
+            .marquee {
+                --duration: 45s;
+                --gap: var(--space);
+                display: flex;
+                overflow: hidden;
+                user-select: none;
+                gap: 2.4rem;
+
+                .marquee_group {
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    gap: var(--gap);
+                    min-width: 100%;
+                    animation: scroll var(--duration) linear infinite;
+
+                    @keyframes scroll {
+                        0% {
+                            transform: translateX(0);
+                        }
+
+                        100% {
+                            transform: translateX(calc(-100% - var(--gap)));
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 15rem;
+                        // object-fit: ;
+    
+                        @media (max-width: 768px) {
+                            height: auto;
+                            max-height: 10rem;
+                        }
+    
+                        @media (max-width: 576px) {
+                            // max-height: 10rem;
+    
+                        }
+                    }
+                }
             }
         }
 
@@ -206,6 +267,7 @@
             @media (max-width: 992px) {
                 width: 100%;
             }
+
             @media (max-width: 768px) {
                 justify-content: center;
             }
@@ -226,9 +288,10 @@
                         height: auto;
                         max-height: 10rem;
                     }
+
                     @media (max-width: 576px) {
                         // max-height: 10rem;
-                        
+
                     }
                 }
             }
@@ -481,7 +544,7 @@
     position: relative;
 
     @media (max-width: 1200px) {
-       padding: 3rem 0;
+        padding: 3rem 0;
     }
 
     &::before {
@@ -752,6 +815,64 @@ section {
         filter: brightness(40%);
     }
 
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    padding: 3rem 0;
+    position: relative;
+    background: #2c63db96;
+}
+
+.testimonials .bg-img {
+    position: absolute;
+    filter: brightness(35%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.testimonials .testimonial-slider .column {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem 1.6rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 12px;
+    background-color: $white;
+    min-height: 370px;
+}
+
+.testimonials .testimonial-slider .column .quote {
+    width: 4rem;
+    filter: grayscale(100%);
+}
+
+.testimonials .testimonial-slider .column .data {
+    margin: 1.5rem 0;
+    color: $dark;
+}
+
+.testimonials .testimonial-slider .column .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.testimonials .testimonial-slider .column .user-info .user-details {
+    padding-left: 0.5rem;
+}
+
+.testimonials .testimonial-slider .column .user-info .user-details .name {
+    font-weight: 500;
+    font-size: 20px;
+    color: $secondary;
+}
+
+.testimonials .testimonial-slider .column .user-info .user-details .address {
+    font-size: 15px;
 }
 
 // Services
@@ -1067,68 +1188,6 @@ section {
     }
 }
 
-// Clients
-.testimonials {
-    padding: 4.5rem 0 2.5rem;
-    text-align: center;
-    position: relative;
-    z-index: 99 !important;
-
-    .testimonial-bg {
-        z-index: -2;
-    }
-
-    .client-slider {
-        padding: 0;
-        overflow: visible;
-
-        &__block {
-            overflow: auto;
-
-            .content-div {
-                background-color: $white;
-                width: 50%;
-                margin: 0 auto;
-                padding: 1rem 1.5rem;
-                border-radius: 12px;
-                overflow: visible;
-                margin-top: 3rem;
-                margin-bottom: 3rem;
-
-                @media (max-width: 768px) {
-                    width: 100%;
-                }
-            }
-
-            img {
-                width: 100%;
-                width: 75px;
-                height: 75px;
-                object-fit: cover;
-                border: 3px solid $primary;
-                border-radius: 50%;
-                display: inline-block;
-                margin-top: -5rem;
-                background-color: $white;
-            }
-
-            p {
-                color: $black;
-                font-size: 1.1rem;
-                margin-top: 1.375rem;
-            }
-
-            .designation {
-                font-size: 1.25rem;
-                font-weight: 600;
-                margin-top: 1.8125rem;
-                color: $warning;
-            }
-        }
-    }
-}
-
-
 .gallery {
     .gallery-photos {
         column-count: 3;
@@ -1227,3 +1286,54 @@ footer {
         }
     }
 }
+
+// Logos Margue
+// .marquee-section {
+//     --space: 2rem;
+//     background: $primary-gradient;
+//     display: grid;
+//     align-content: center;
+//     overflow: hidden;
+//     gap: var(--space);
+//     width: 100%;
+//     font-size: 1.5rem;
+//     line-height: 1.5;
+//     padding: 4rem 0;
+
+//     .marquee {
+//         --duration: 65s;
+//         --gap: var(--space);
+//         display: flex;
+//         overflow: hidden;
+//         user-select: none;
+//         gap: 2.4rem;
+
+//         .marquee_group {
+//             flex-shrink: 0;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-around;
+//             gap: var(--gap);
+//             min-width: 100%;
+//             animation: scroll var(--duration) linear infinite;
+
+//             @keyframes scroll {
+//                 0% {
+//                     transform: translateX(0);
+//                 }
+
+//                 100% {
+//                     transform: translateX(calc(-100% - var(--gap)));
+//                 }
+//             }
+
+//             img {
+//                 // filter: contrast(1);
+//                 max-width: 12rem;
+//                 object-fit: contain;
+//                 filter: saturate(0%);
+//                 z-index: 2;
+//             }
+//         }
+//     }
+// }
