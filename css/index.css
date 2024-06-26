@@ -12732,6 +12732,11 @@ nav .nav-link:hover {
   line-height: 1.5;
   padding: 0rem 0;
 }
+@media (max-width: 992px) {
+  .achievements .flex .marquee-section {
+    width: 100%;
+  }
+}
 .achievements .flex .marquee-section .marquee {
   --duration: 45s;
   --gap: var(--space);
@@ -12809,7 +12814,7 @@ nav .nav-link:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, hsl(202, 71%, 52%) 10%, hsl(225, 65%, 50%) 100%);
+  background: linear-gradient(180deg, #2e9cdc 10%, #2d56d2 100%);
   z-index: -2;
 }
 .services-list::before {
@@ -12978,7 +12983,7 @@ nav .nav-link:hover {
 }
 
 .about-us {
-  background: linear-gradient(180deg, hsl(202, 71%, 52%) 10%, hsl(225, 65%, 50%) 100%);
+  background: linear-gradient(180deg, #2e9cdc 10%, #2d56d2 100%);
   padding: 3rem 0 0;
   position: relative;
 }
