@@ -12632,6 +12632,7 @@ nav .nav-link:hover {
   color: white;
   line-height: 35px;
   margin-bottom: 0.5rem;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 .nav-hero .hero .img-div {
   width: 43%;
@@ -12687,7 +12688,7 @@ nav .nav-link:hover {
   z-index: -1;
   object-fit: cover;
   z-index: -2;
-  filter: blur(2px) brightness(50%);
+  filter: blur(2px) brightness(40%);
 }
 .nav-hero .hero::after {
   position: absolute;
