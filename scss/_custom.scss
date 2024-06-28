@@ -134,6 +134,7 @@ p {
     font-weight: 500;
     border: 2px solid $secondary;
     transition: all 500ms;
+
     &:hover {
         color: $secondary;
         background-color: transparent;
@@ -234,6 +235,11 @@ section {
     position: relative;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
+
+    @media (max-width: 576px) {
+        padding-left: 0rem;
+    }
+
     &::after {
         position: absolute;
         content: "";
@@ -242,6 +248,10 @@ section {
         left: 0%;
         bottom: 50%;
         background-color: $secondary;
+
+        @media (max-width: 576px) {
+            width: 0rem;
+        }
     }
 }
 
@@ -257,4 +267,8 @@ section {
     //     bottom: -7px;
     //     background-color: $danger;
     // }
+}
+
+body {
+    font-size: 1.1rem;
 }
